@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_routes.dart';
-import '../../widgets/common/wizard_scaffold.dart';
 
 class AddMedSuccessScreen extends StatelessWidget {
   const AddMedSuccessScreen({super.key});

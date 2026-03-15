@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../data/models/medication.dart';
 import '../constants/app_colors.dart';
-import 'package:flutter/material.dart';
 
 class MedicationUtils {
   static String frequencyLabel(DoseFrequency f) {

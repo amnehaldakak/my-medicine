@@ -22,16 +22,12 @@ import '../presentation/screens/onboarding/splash_screen.dart';
 import '../presentation/screens/profile/profile_screen.dart';
 import '../presentation/screens/progress/progress_screen.dart';
 import '../presentation/screens/shell/main_shell.dart';
-import 'constants/app_routes.dart';
-
-
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
 GoRouter createRouter(BuildContext context) {
-  final authController = Provider.of<AuthController
-  >(context, listen: false);
+  final authController = Provider.of<AuthController>(context, listen: false);
 
   return GoRouter(
     navigatorKey: _rootNavigatorKey,
@@ -42,7 +38,7 @@ GoRouter createRouter(BuildContext context) {
           state.matchedLocation == AppRoutes.createAccount;
       final isOnboarding =
           state.matchedLocation.startsWith('/onboarding') ||
-          state.matchedLocation == AppRoutes.splash;
+              state.matchedLocation == AppRoutes.splash;
 
       if (!isAuth && !isAuthRoute && !isOnboarding) {
         return AppRoutes.login;
@@ -54,53 +50,50 @@ GoRouter createRouter(BuildContext context) {
       // Splash
       GoRoute(
         path: AppRoutes.splash,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, $1) => const SplashScreen(),
       ),
       // Onboarding
       GoRoute(
         path: AppRoutes.onboardingNeverMiss,
-        builder: (_, __) =>
-            const OnboardingScreen(pageIndex: 0),
+        builder: (_, $1) => const OnboardingScreen(pageIndex: 0),
       ),
       GoRoute(
         path: AppRoutes.onboardingTrackRefills,
-        builder: (_, __) =>
-            const OnboardingScreen(pageIndex: 1),
+        builder: (_, $1) => const OnboardingScreen(pageIndex: 1),
       ),
       GoRoute(
         path: AppRoutes.onboardingShareDoctor,
-        builder: (_, __) =>
-            const OnboardingScreen(pageIndex: 2),
+        builder: (_, $1) => const OnboardingScreen(pageIndex: 2),
       ),
       // Auth
       GoRoute(
         path: AppRoutes.login,
-        builder: (_, __) => const LoginScreen(),
+        builder: (_, $1) => const LoginScreen(),
       ),
       GoRoute(
         path: AppRoutes.createAccount,
-        builder: (_, __) => const CreateAccountScreen(),
+        builder: (_, $1) => const CreateAccountScreen(),
       ),
       // Main shell with bottom nav
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
-        builder: (_, __, child) => MainShell(child: child),
+        builder: (_, $1, child) => MainShell(child: child),
         routes: [
           GoRoute(
             path: AppRoutes.home,
-            builder: (_, __) => const HomeScreen(),
+            builder: (_, $1) => const HomeScreen(),
           ),
           GoRoute(
             path: AppRoutes.medications,
-            builder: (_, __) => const MedicationsScreen(),
+            builder: (_, $1) => const MedicationsScreen(),
           ),
           GoRoute(
             path: AppRoutes.progress,
-            builder: (_, __) => const ProgressScreen(),
+            builder: (_, $1) => const ProgressScreen(),
           ),
           GoRoute(
             path: AppRoutes.profile,
-            builder: (_, __) => const ProfileScreen(),
+            builder: (_, $1) => const ProfileScreen(),
           ),
         ],
       ),
@@ -114,7 +107,7 @@ GoRouter createRouter(BuildContext context) {
       ),
       GoRoute(
         path: AppRoutes.refillTracker,
-        builder: (_, __) => const RefillTrackerScreen(),
+        builder: (_, $1) => const RefillTrackerScreen(),
       ),
       GoRoute(
         path: AppRoutes.notificationAction,
@@ -126,31 +119,31 @@ GoRouter createRouter(BuildContext context) {
       // Add medication wizard
       GoRoute(
         path: AppRoutes.addMedName,
-        builder: (_, __) => const AddMedNameScreen(),
+        builder: (_, $1) => const AddMedNameScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedDosage,
-        builder: (_, __) => const AddMedDosageScreen(),
+        builder: (_, $1) => const AddMedDosageScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedFrequency,
-        builder: (_, __) => const AddMedFrequencyScreen(),
+        builder: (_, $1) => const AddMedFrequencyScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedTimes,
-        builder: (_, __) => const AddMedTimesScreen(),
+        builder: (_, $1) => const AddMedTimesScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedAppearance,
-        builder: (_, __) => const AddMedAppearanceScreen(),
+        builder: (_, $1) => const AddMedAppearanceScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedInventory,
-        builder: (_, __) => const AddMedInventoryScreen(),
+        builder: (_, $1) => const AddMedInventoryScreen(),
       ),
       GoRoute(
         path: AppRoutes.addMedSuccess,
-        builder: (_, __) => const AddMedSuccessScreen(),
+        builder: (_, $1) => const AddMedSuccessScreen(),
       ),
     ],
   );

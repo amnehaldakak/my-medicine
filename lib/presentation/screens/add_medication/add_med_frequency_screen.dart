@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_routes.dart';
-import '../../widgets/common/wizard_scaffold.dart';
+import '../../../data/models/medication.dart';
 import '../../controllers/medication_controller.dart';
 import '../../widgets/common/wizard_scaffold.dart';
-import '../../../data/models/medication.dart';
 
 class AddMedFrequencyScreen extends StatefulWidget {
   const AddMedFrequencyScreen({super.key});

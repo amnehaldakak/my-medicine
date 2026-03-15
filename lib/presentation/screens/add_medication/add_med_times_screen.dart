@@ -5,7 +5,6 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_routes.dart';
 import '../../widgets/common/wizard_scaffold.dart';
 import '../../controllers/medication_controller.dart';
-import '../../widgets/common/wizard_scaffold.dart';
 import '../../../data/models/medication.dart';
 
 class AddMedTimesScreen extends StatefulWidget {
@@ -14,7 +13,7 @@ class AddMedTimesScreen extends StatefulWidget {
   State<AddMedTimesScreen> createState() => _AddMedTimesScreenState();
 }
 class _AddMedTimesScreenState extends State<AddMedTimesScreen> {
-  List<MedicationTime> _times = [const MedicationTime(label: 'Morning', time: '8:00 AM')];
+  final List<MedicationTime> _times = [const MedicationTime(label: 'Morning', time: '8:00 AM')];
 
   Future<void> _pickTime(int idx) async {
     final picked = await showTimePicker(context: context, initialTime: TimeOfDay.now());
