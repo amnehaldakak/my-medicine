@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen>
               height: 300,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: AppColors.primaryLight.withOpacity(0.4),
+                color: AppColors.primaryLight.withValues(alpha: 0.4),
               ),
             ),
           ),
@@ -59,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen>
               height: 280,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: AppColors.primaryLight.withOpacity(0.3),
+                color: AppColors.primaryLight.withValues(alpha: 0.3),
               ),
             ),
           ),
@@ -77,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen>
                       borderRadius: BorderRadius.circular(28),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
+                          color: Colors.black.withValues(alpha: 0.15),
                           blurRadius: 30,
                           offset: const Offset(0, 10),
                         ),
@@ -101,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen>
                     'Your health companion',
                     style: TextStyle(
                       fontSize: 16,
-                      color: AppColors.primaryMint.withOpacity(0.9),
+                      color: AppColors.primaryMint.withValues(alpha: 0.9),
                     ),
                   ),
                 ],

@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
                       style: const TextStyle(fontSize: 28, color: Colors.white, fontWeight: FontWeight.w700))),
                   const SizedBox(height: 10),
                   Text(user?.name ?? '', style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600)),
-                  Text(user?.email ?? '', style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 13)),
+                  Text(user?.email ?? '', style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 13)),
                 ]),
               )),
             ),

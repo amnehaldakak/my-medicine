@@ -135,7 +135,7 @@ class _PharmacyCard extends StatelessWidget {
         const SizedBox(width: 8),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-          decoration: BoxDecoration(color: open ? AppColors.success.withOpacity(0.1) : AppColors.error.withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
+          decoration: BoxDecoration(color: open ? AppColors.success.withValues(alpha: 0.1) : AppColors.error.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(6)),
           child: Text(open ? 'Open' : 'Closed', style: TextStyle(color: open ? AppColors.success : AppColors.error, fontSize: 11, fontWeight: FontWeight.w600)),
         ),
       ]),

@@ -148,13 +148,13 @@ class _MedListCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(14),
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
+          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2))],
         ),
         child: Row(
           children: [
             Container(
               width: 48, height: 48,
-              decoration: BoxDecoration(color: pillColor.withOpacity(0.15), borderRadius: BorderRadius.circular(12)),
+              decoration: BoxDecoration(color: pillColor.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(12)),
               child: Icon(Icons.medication, color: pillColor, size: 28),
             ),
             const SizedBox(width: 12),

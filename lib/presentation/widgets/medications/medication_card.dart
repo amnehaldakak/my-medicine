@@ -24,7 +24,7 @@ class MedicationListTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
+              color: Colors.black.withValues(alpha: 0.04),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -38,7 +38,7 @@ class MedicationListTile extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: MedicationUtils.pillColor(med.colorHex).withOpacity(0.15),
+                color: MedicationUtils.pillColor(med.colorHex).withValues(alpha: 0.15),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -84,7 +84,7 @@ class MedicationListTile extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               decoration: BoxDecoration(
                 color: MedicationUtils.statusColor(med.status)
-                    .withOpacity(0.12),
+                    .withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -129,7 +129,7 @@ class ScheduleMedCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
+              color: Colors.black.withValues(alpha: 0.04),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -142,7 +142,7 @@ class ScheduleMedCard extends StatelessWidget {
               width: 40,
               height: 40,
               decoration: BoxDecoration(
-                color: MedicationUtils.pillColor(med.colorHex).withOpacity(0.15),
+                color: MedicationUtils.pillColor(med.colorHex).withValues(alpha: 0.15),
                 shape: BoxShape.circle,
               ),
               child: Icon(

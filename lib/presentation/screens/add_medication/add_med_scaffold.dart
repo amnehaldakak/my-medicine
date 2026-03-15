@@ -63,7 +63,7 @@ class AddMedScaffold extends StatelessWidget {
                           Text(
                             subtitle,
                             style: TextStyle(
-                                color: Colors.white.withOpacity(0.75),
+                                color: Colors.white.withValues(alpha: 0.75),
                                 fontSize: 13),
                           ),
                         ],
@@ -72,7 +72,7 @@ class AddMedScaffold extends StatelessWidget {
                     Text(
                       'Step $currentStep of $totalSteps',
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.75),
+                          color: Colors.white.withValues(alpha: 0.75),
                           fontSize: 12),
                     ),
                   ],
@@ -84,7 +84,7 @@ class AddMedScaffold extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: currentStep / totalSteps,
                     minHeight: 6,
-                    backgroundColor: Colors.white.withOpacity(0.3),
+                    backgroundColor: Colors.white.withValues(alpha: 0.3),
                     valueColor: const AlwaysStoppedAnimation<Color>(
                         AppColors.primaryMint),
                   ),

@@ -26,7 +26,7 @@ class _NotificationActionScreenState extends State<NotificationActionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary.withOpacity(0.95),
+      backgroundColor: AppColors.primary.withValues(alpha: 0.95),
       body: Stack(
         children: [
           Positioned(right: -40, bottom: -40, child: Container(
@@ -48,14 +48,14 @@ class _NotificationActionScreenState extends State<NotificationActionScreen> {
                 if (_med != null) ...[
                   Container(
                     width: 80, height: 80,
-                    decoration: BoxDecoration(color: Colors.white.withOpacity(0.15), borderRadius: BorderRadius.circular(20)),
+                    decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(20)),
                     child: const Icon(Icons.medication, color: Colors.white, size: 44),
                   ),
                   const SizedBox(height: 24),
-                  Text('Time to take your medication', style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 14)),
+                  Text('Time to take your medication', style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14)),
                   const SizedBox(height: 8),
                   Text(_med!.name, style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w700)),
-                  Text('${_med!.dosageAmount.toStringAsFixed(0)} ${_med!.dosageUnit}', style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 16)),
+                  Text('${_med!.dosageAmount.toStringAsFixed(0)} ${_med!.dosageUnit}', style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 16)),
                 ],
                 const Spacer(),
                 Padding(

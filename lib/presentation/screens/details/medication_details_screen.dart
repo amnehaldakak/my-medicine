@@ -55,18 +55,18 @@ class _MedicationDetailsScreenState extends State<MedicationDetailsScreen> {
                   child: Row(children: [
                     Container(
                       width: 64, height: 64,
-                      decoration: BoxDecoration(color: pillColor.withOpacity(0.2), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: pillColor.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(16)),
                       child: Icon(Icons.medication, color: pillColor, size: 36),
                     ),
                     const SizedBox(width: 16),
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       Text(med.name, style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700)),
                       Text('${med.dosageAmount.toStringAsFixed(0)} ${med.dosageUnit}',
-                        style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 14)),
+                        style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14)),
                       const SizedBox(height: 4),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(6)),
+                        decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(6)),
                         child: Text(_statusLabel(med.status),
                           style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500)),
                       ),
